@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken"
 import { db } from "models"
 import { User } from "models/user"
 
-interface KoopAuthJWT extends jwt.Jwt {
+interface AuthJWT extends jwt.Jwt {
 	payload: jwt.Jwt["payload"] & {
 		userId: string
 	}
@@ -15,7 +15,7 @@ interface KoopAuthJWT extends jwt.Jwt {
  */
 export const verifyAuthToken = async (authToken: string): Promise<User> => {
 	try {
-		const decodedToken = jwt.verify(authToken, process.env.JWT_SECRET, { complete: true }) as KoopAuthJWT
+		const decodedToken = jwt.verify(authToken, process.env.JWT_SECRET, { complete: true }) as AuthJWT
 		const userId = decodedToken.payload.userId
 
 		if (userId) {
