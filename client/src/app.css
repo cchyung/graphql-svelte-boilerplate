@@ -1,0 +1,94 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './styles/colors.css';
+@import './styles/ring.css';
+@import './styles/typography.css';
+
+/* When working with conditionally determined tailwind classes, do not interpolate the class name. 
+purgecss is very naive and will purge it if it isn't explicitly written in a file. Instead, just 
+write the entire class out and use a contional between them. 
+i.e don't `text-${color}`, do (dark ? 'text-black' : 'text-white')*/
+
+@layer base {
+	h1 {
+		@apply title-1;
+	}
+	h2 {
+		@apply title-2;
+	}
+	h3 {
+		@apply title-3;
+	}
+	h4 {
+		@apply title-4;
+	}
+	p {
+		@apply body;
+	}
+}
+
+@layer components {
+	/* Text */
+	.text-theme {
+		@apply text-black dark:text-white;
+	}
+	.text-gradient-primary {
+		@apply bg-gradient-primary text-transparent bg-clip-text;
+	}
+	.text-gradient-secondary {
+		@apply bg-gradient-secondary text-transparent bg-clip-text;
+	}
+	.text-conic-gradient-primary {
+		@apply bg-conic-gradient-primary text-transparent bg-clip-text;
+	}
+	.text-conic-gradient-secondary {
+		@apply bg-conic-gradient-secondary text-transparent bg-clip-text;
+	}
+
+	/* Background */
+	.bg-theme {
+		@apply bg-background-primary dark:bg-background-primary-dark;
+	}
+	.bg-theme-secondary {
+		@apply bg-background-secondary dark:bg-background-secondary-dark;
+	}
+
+	/* Shadow */
+	.shadow-theme {
+		@apply shadow-md dark:shadow-gray-500;
+	}
+
+	.shadow-glow-theme {
+		@apply shadow-glow dark:shadow-glow-dark;
+	}
+}
+
+@layer utilities {
+	.hide {
+		@apply invisible transition-all ease-in-out duration-200 opacity-0 scale-95;
+	}
+
+	.show {
+		@apply visible opacity-100 scale-100;
+	}
+
+	.center {
+		@apply grid place-items-center;
+	}
+
+	/* Text Shadow */
+	.text-shadow {
+		text-shadow: 1px 2px 2px #bebebe;
+	}
+	.text-shadow-md {
+		text-shadow: 2px 2px 4px #bebebe;
+	}
+	.text-shadow-lg {
+		text-shadow: 4px 4px 8px #bebebe;
+	}
+	.text-shadow-none {
+		text-shadow: none;
+	}
+}

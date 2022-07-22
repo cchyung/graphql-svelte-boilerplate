@@ -1,0 +1,17 @@
+overwrite: true
+schema:
+  - ../server/src/generated/schema.graphql
+generates:
+  ./src/lib/api/index.ts:
+    config:
+      clientPath: ./client
+      asyncQuery: true
+    documents: './src/lib/api/**/*.ts'
+    plugins:
+      - typescript
+      - typescript-operations
+      - add:
+          content:
+            - '/* This file was automatically generated.  Do not edit. */'
+            - /* prettier-ignore */
+            - /* eslint-disable */

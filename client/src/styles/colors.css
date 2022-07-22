@@ -1,0 +1,106 @@
+:root {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+
+	/* Light Colors */
+	--color-primary: #fbc02d;
+	--color-secondary: #ecb7ed;
+	--color-inverse: #000000;
+
+	--color-primary-translucent: #fbc02d80;
+	--color-secondary-translucent: #ecb7ed80;
+	--color-inverse-translucent: #0000001a;
+
+	--color-primary-focus: #f0ad05;
+	--color-secondary-focus: #e18ee3;
+	--color-inverse-focus: #202020;
+
+	--color-gradient-primary: linear-gradient(90deg, #fbc02d 0%, #fff176 100%);
+	--color-gradient-secondary: linear-gradient(90deg, #e0bdc1 0%, #ecb7ed 50.52%, #b49ffc 100%);
+	--color-gradient-primary-transitioned: linear-gradient(90deg, #fbc02d 50%, #fff176 100%);
+	--color-gradient-primary-rotated: linear-gradient(180deg, #fbc02d 0%, #fff176 100%);
+	--color-gradient-secondary-rotated: linear-gradient(
+		180deg,
+		#e0bdc1 0%,
+		#ecb7ed 50.52%,
+		#b49ffc 100%
+	);
+	--color-conic-gradient-primary: conic-gradient(
+		from 138.4deg at -8.59% 100%,
+		#fff2d0 -32.29deg,
+		#feec86 18.61deg,
+		#fdd86c 58.48deg,
+		#fab134 159.55deg,
+		#faad2c 220.86deg,
+		#fee57c 290.78deg,
+		#fff2d0 327.71deg,
+		#feec86 378.61deg
+	);
+	--color-conic-gradient-secondary: conic-gradient(
+		from 182.58deg at 52.59% 50%,
+		#c2a8bd -12.64deg,
+		#d3a6b5 20.73deg,
+		#b0adbf 86.21deg,
+		#b699a8 171.36deg,
+		#bca7b6 202.06deg,
+		#e4b3b8 277.21deg,
+		#cba8cb 330.14deg,
+		#c2a8bd 347.36deg,
+		#d3a6b5 380.73deg
+	);
+
+	--color-background-primary: #ffffff;
+	--color-background-secondary: #00000006;
+
+	/* Dark Colors */
+	--color-primary-dark: #fbc02d;
+	--color-secondary-dark: #ecb7ed;
+	--color-inverse-dark: #ffffff;
+
+	--color-primary-translucent-dark: #fbc02dcc;
+	--color-secondary-translucent-dark: #ecb7edcc;
+	--color-inverse-translucent-dark: #ffffffcc;
+
+	--color-primary-focus-dark: #f0ad05;
+	--color-secondary-focus-dark: #e18ee3;
+	--color-inverse-focus-dark: #e8e8e8;
+
+	--color-gradient-primary-dark: linear-gradient(90deg, #fbc02d 0%, #fff176 100%);
+	--color-gradient-secondary-dark: linear-gradient(90deg, #e0bdc1 0%, #ecb7ed 50.52%, #b49ffc 100%);
+	--color-gradient-primary-dark-conic: conic-gradient(
+		from 138.4deg at -8.59% 100%,
+		#fff2d0 -32.29deg,
+		#feec86 18.61deg,
+		#fdd86c 58.48deg,
+		#fab134 159.55deg,
+		#faad2c 220.86deg,
+		#fee57c 290.78deg,
+		#fff2d0 327.71deg,
+		#feec86 378.61deg
+	);
+	--color-gradient-secondary-dark-conic: conic-gradient(
+		from 182.58deg at 52.59% 50%,
+		#c2a8bd -12.64deg,
+		#d3a6b5 20.73deg,
+		#b0adbf 86.21deg,
+		#b699a8 171.36deg,
+		#bca7b6 202.06deg,
+		#e4b3b8 277.21deg,
+		#cba8cb 330.14deg,
+		#c2a8bd 347.36deg,
+		#d3a6b5 380.73deg
+	);
+
+	--color-background-primary-dark: #000000;
+	--color-background-secondary-dark: #ffffff1a;
+
+	/* Status Colors */
+	--color-success-primary: #4caf50;
+	--color-success-secondary: #e8f5e9;
+	--color-info-primary: #2196f3;
+	--color-info-secondary: #e3f2fd;
+	--color-warning-primary: #f9a825;
+	--color-warning-secondary: #fff9c4;
+	--color-error-primary: #e12d39;
+	--color-error-secondary: #ffe3e3;
+}

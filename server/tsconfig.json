@@ -1,0 +1,29 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"checkJs": true,
+		"baseUrl": ".",
+		"paths": {
+			"models": ["src/models"],
+			"models/*": ["src/models/*"],
+			"schemas": ["src/schemas"],
+			"schemas/*": ["src/schemas/*"],
+			"services": ["src/services"],
+			"services/*": ["src/services/*"],
+			"lib": ["common"],
+			"lib/*": ["common/*"],
+			"config": ["config"],
+			"config/*": ["config/*"],
+			"scripts": ["scripts"],
+			"scripts/*": ["scripts/*"],
+			"tests": ["tests"],
+			"tests/*": ["tests/*"]
+		}
+	},
+	"include": ["**/*.d.ts", "**/*.js", "**/*.ts"]
+}

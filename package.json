@@ -1,0 +1,48 @@
+{
+	"name": "graphql-svelte-boilerplate",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"workspaces": [
+		"server",
+		"client",
+		"contract",
+		"packages/*"
+	],
+	"scripts": {
+		"test": "jest",
+		"dev": "concurrently \"yarn dev:client\" \"yarn dev:server\" --names=\"client,server\" --prefix-colors=\"green,magenta\" -p\"[{name}] [{time}]\"",
+		"dev:client": "yarn workspace client dev",
+		"dev:server": "yarn workspace server dev",
+		"build:server": "yarn workspace server build",
+		"start:server": "yarn workspace server start",
+		"test:server": "yarn workspace server test",
+		"seed": "yarn workspace server seed",
+		"clear": "yarn workspace server clear",
+		"build": "",
+		"lint": "prettier --check",
+		"format": "prettier --write .",
+		"prepare": "husky install",
+		"fix-deps": "ts-node-dev cleanDeps.ts"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.10.2",
+		"@typescript-eslint/parser": "^5.10.2",
+		"concurrently": "^6.3.0",
+		"dotenv": "^10.0.0",
+		"eslint": "^8.8.0",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2",
+		"prettier": "^2.4.1",
+		"ts-node-dev": "^1.1.8",
+		"tsconfig-paths": "^3.11.0",
+		"typescript": "^4.4.3"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,svelte,stories.svelte}": [
+			"prettier --write"
+		]
+	}
+}

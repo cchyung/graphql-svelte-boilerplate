@@ -1,0 +1,48 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "es2020",
+		"lib": ["es2020", "DOM"],
+		"target": "es2019",
+		/** Necessary for 0xproject */
+		"typeRoots": ["node_modules/@0xproject/typescript-typings/types", "node_modules/@types"],
+		/**
+			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+			to enforce using \`import type\` instead of \`import\` for Types.
+			*/
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		/**
+			To have warnings/errors of the Svelte compiler at the correct position,
+			enable source maps by default.
+			*/
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+		"checkJs": true,
+		"baseUrl": ".",
+		"paths": {
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"],
+			"$app/*": [".svelte-kit/dev/runtime/app/*"],
+			"$config": ["src/config"],
+			"$config/*": ["src/config/*"],
+			"$env": ["src/env"],
+			"$api": ["src/lib/api"],
+			"$api/*": ["src/lib/api/*"],
+			"$components": ["src/lib/components"],
+			"$components/*": ["src/lib/components/*"],
+			"$icons": ["src/lib/icons"],
+			"$icons/*": ["src/lib/icons/*"],
+			"$stores": ["src/lib/stores"],
+			"$stores/*": ["src/lib/stores/*"],
+			"$utils": ["src/lib/utils"],
+			"$utils/*": ["src/lib/utils/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+}

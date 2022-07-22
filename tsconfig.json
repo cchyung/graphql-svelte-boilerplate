@@ -1,0 +1,28 @@
+{
+	"typeRoots": ["types"],
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"module": "commonjs",
+		"target": "ES2018",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"declaration": false,
+		"noLib": false,
+		"sourceMap": true,
+		"pretty": true,
+		"allowUnreachableCode": true,
+		"allowUnusedLabels": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": false,
+		"noImplicitUseStrict": false,
+		"outDir": "dist/",
+		"listFiles": false,
+		"skipLibCheck": true,
+		"lib": ["ES2015"]
+	},
+	"exclude": ["node_modules", "tests/**/*"]
+}

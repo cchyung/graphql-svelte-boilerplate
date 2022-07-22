@@ -1,0 +1,104 @@
+@layer components {
+	.ring-gradient {
+		@apply relative z-0;
+	}
+
+	.ring-gradient::before {
+		content: '';
+		border-radius: var(--ring-gradient-radius, 9999px);
+		width: var(--ring-gradient-offset, 100%);
+		height: var(--ring-gradient-offset, 100%);
+		@apply absolute bg-white dark:bg-black top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10;
+	}
+
+	.ring-gradient::after {
+		content: '';
+		background-image: var(--ring-gradient-color, --color-gradient-primary);
+		border-radius: var(--ring-gradient-radius, 9999px);
+		width: calc(var(--ring-gradient-size, 110%) + var(--ring-gradient-offset, 100%) - 100%);
+		height: calc(var(--ring-gradient-size, 110%) + var(--ring-gradient-offset, 100%) - 100%);
+		@apply absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-20;
+	}
+
+	/* hacky hover state but not sure how to override hover: */
+	.ring-gradient-hover {
+		@apply ring-gradient before:hide after:hide;
+	}
+
+	.ring-gradient-hover:hover {
+		@apply ring-gradient before:show after:show;
+	}
+
+	/* ring options */
+	.ring-gradient-rounded-sm {
+		--ring-gradient-radius: 0.125rem;
+	}
+
+	.ring-gradient-rounded {
+		--ring-gradient-radius: 0.25rem;
+	}
+
+	.ring-gradient-rounded-md {
+		--ring-gradient-radius: 0.375rem;
+	}
+
+	.ring-gradient-rounded-lg {
+		--ring-gradient-radius: 0.5rem;
+	}
+
+	.ring-gradient-rounded-xl {
+		--ring-gradient-radius: 0.75rem;
+	}
+
+	.ring-gradient-rounded-full {
+		--ring-gradient-radius: 9999px;
+	}
+
+	.ring-gradient-rounded-full {
+		@apply rounded-full;
+	}
+
+	.ring-gradient-primary {
+		--ring-gradient-color: var(--color-gradient-primary);
+	}
+
+	.ring-gradient-secondary {
+		--ring-gradient-color: var(--color-gradient-secondary);
+	}
+
+	.ring-gradient-1 {
+		--ring-gradient-size: 105%;
+	}
+
+	.ring-gradient-2 {
+		--ring-gradient-size: 110%;
+	}
+
+	.ring-gradient-3 {
+		--ring-gradient-size: 120%;
+	}
+
+	.ring-gradient-4 {
+		--ring-gradient-size: 130%;
+	}
+
+	.ring-gradient-offset-1 {
+		--ring-gradient-offset: 105%;
+	}
+
+	.ring-gradient-offset-2 {
+		--ring-gradient-offset: 110%;
+	}
+
+	.ring-gradient-offset-3 {
+		--ring-gradient-offset: 120%;
+	}
+
+	.ring-gradient-offset {
+		--ring-gradient-offset: 120%;
+	}
+
+	.ring-gradient-offset-4 {
+		--ring-gradient-offset: 130%;
+	}
+}

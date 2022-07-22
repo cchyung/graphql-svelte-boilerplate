@@ -1,0 +1,76 @@
+@layer components {
+	.title-1 {
+		font-weight: bold;
+		font-size: 42px;
+		line-height: 1.2;
+	}
+	.title-2 {
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 1.2;
+	}
+	.title-3 {
+		font-weight: normal;
+		font-size: 26px;
+		line-height: 1.2;
+	}
+	.title-4 {
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+	.page-heading {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.tab-heading {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 41px;
+	}
+	.heading {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.sub-heading {
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.btn-text {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.btn-text-lite {
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.body {
+		font-family: 'Mulish', sans-serif;
+		font-weight: light;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.caption {
+		font-family: 'Mulish', sans-serif;
+		font-weight: light;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.caption-2 {
+		font-family: 'Mulish', sans-serif;
+		font-weight: light;
+		font-size: 10px;
+		line-height: 13px;
+	}
+	.caption-3 {
+		font-family: 'Mulish', sans-serif;
+		font-weight: light;
+		font-size: 9px;
+		line-height: 13px;
+	}
+}
