@@ -14,9 +14,7 @@ interface ImportMeta {
 	readonly env: ImportMetaEnv
 }
 
-interface Window {
-	ethereum: any
-}
+interface Window {}
 
 declare module '*.svelte' {
 	const content: any

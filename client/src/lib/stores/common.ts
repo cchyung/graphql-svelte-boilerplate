@@ -25,10 +25,3 @@ export const now = readable(new Date(), (set) => {
 	}, 1000)
 	return () => clearInterval(interval)
 })
-
-const currency = 'usd'
-const ethUrl = `https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=${currency}`
-export const getEthPrice = async () => {
-	const res = await axios.get(ethUrl)
-	return res.data?.ethereum?.[currency]
-}
