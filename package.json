@@ -5,9 +5,7 @@
 	"private": true,
 	"workspaces": [
 		"server",
-		"client",
-		"contract",
-		"packages/*"
+		"client"
 	],
 	"scripts": {
 		"test": "jest",
